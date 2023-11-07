@@ -1,0 +1,34 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:AvaMusicStore.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaMusicStore.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="AvaMusicStore">
+
+    <Window.Styles>
+        <!-- <StyleInclude Source="/Styles/Styles1.axaml"></StyleInclude> -->
+        <!--<StyleInclude Source="avares://AvaMusicStore/Styles/Styles1.axaml"></StyleInclude>-->
+    </Window.Styles>
+    <Window.Resources>
+        <ResourceDictionary>
+            <FontFamily x:Key="font1">avares://AvaMusicStore/Assets/Fonts/#Times</FontFamily>
+			<FontFamily x:Key="font2">avares://AvaMusicStore/Assets/Fonts/#Nunito</FontFamily>
+			<FontFamily x:Key="font3">avares://AvaMusicStore/Assets/Fonts/#黑体</FontFamily>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Panel>
+        <StackPanel Orientation="Vertical">
+			<!--this font1 is ok-->
+            <TextBlock Text="阿收到1233124124" FontSize="22" FontFamily="{StaticResource  font1}"  FontWeight="Bold"></TextBlock>
+			<!--this font2 is ok -->
+            <TextBlock Text="阿收到1233124124" FontSize="22" FontFamily="{StaticResource  font2}"></TextBlock>
+			<!--this font3 will cause exception -->
+			<TextBlock Text="阿收到1233124124" FontSize="22" FontFamily="{StaticResource  font3}"></TextBlock>
+        </StackPanel>
+    </Panel>
+
+</Window>
