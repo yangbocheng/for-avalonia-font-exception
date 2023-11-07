@@ -80,7 +80,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <Resource Include="Fonts\simhei.ttf" />
-    <Resource Include="Fonts\AlimamaDaoLiTi.ttf" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
